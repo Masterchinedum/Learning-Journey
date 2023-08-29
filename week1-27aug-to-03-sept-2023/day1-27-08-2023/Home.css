@@ -1,0 +1,327 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 70px;
+  }
+  
+  .menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #3388f6;
+    text-decoration: underline;
+  }
+  
+  .button a {
+    display: inline-block;
+    background-color: #3388f6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .button a:hover {
+    background-color: #fff;
+    color: #3388f6;
+    border: 2px solid #3388f6;
+  }
+  
+  main {
+    
+    background-color: #fff;
+  
+  }
+  .hero {
+    background-color: #1F2937;
+    display: flex;
+    color: #fff;
+    font-size: 18px;
+    padding: 100px;
+    min-height: 600px;
+  }
+  .herotext {
+    display: flex 1;
+    width: 50%;
+  }
+  .heroimage {
+    display: flex 1;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+  }
+  
+  .heroimage img {
+      width: 100%;
+  }
+  
+  .menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .button a {
+    display: inline-block;
+    background-color: #3388f6;
+    color: #ffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .button a:hover {
+    background-color: #fff;
+    color: #3388f6;
+    border: 2px solid #3388f6;
+  }
+  
+  main {
+    
+    background-color: #fff;
+  
+  }
+  .hero {
+    background-color: #1F2937;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .hero h1 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    margin-bottom: 15px;
+  }
+  
+  .hero .button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3388f6;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .button a:hover {
+    background-color: #ffff;
+    color: #3388f6;
+  }
+  
+  .body {
+    background-color: #fff;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .bodytext{
+    color: black;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .bodyimages {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    color: black;
+    text-align: center;
+    flex-wrap: wrap;
+  
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%; /* Set the height of the image */
+    object-fit: cover;
+  }
+  
+  .bodyimages .image {
+    display: flex 1;
+    width: 25%;
+    justify-content: center;
+    align-items:  center;
+    padding: 20px;
+  }
+  .bodyimages .image img {
+    border: 5px solid #3388f6;
+    border-radius: 15px;
+  }
+  .bodyimages .image img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    border: 2px solid black;
+  }
+  .bodyimages .image h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  
+  }
+  a {
+    color: black; /* set the color to the same as the background color */
+    text-decoration: none; /* remove the underline */
+  }
+  
+  a:hover {
+    color: #3388f6; /* set a different color when the link is hovered over */
+  }
+  
+  .comments {
+  
+    background-color: #E5E7EB;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    min-height: 300px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+  .comments .reviewcomments p {
+    font-size: 20px;
+    color: #1F2937;
+  }
+  .comments .reviewcomments h4 {
+    text-align: right;
+    color: #1F2937;
+    padding: 10px;
+  }
+  .call {
+    display: flex;
+    background-color: #3388f6;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 50px;
+    color: #fff;
+    justify-content: space-between;
+  }
+  .content h3{
+    padding-bottom: 20px;
+  }
+  .call .button a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3388f6;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .call .button a:hover {
+    background-color: #fff;
+    color :#3388f6
+  }
+  
+  footer {
+    background-color: #1F2937;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    width: 30%;
+  
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+  }
+  
+  .social-icons li a {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Font Awesome icons */
+  .fa-facebook:before {
+    content: "\f09a";
+  }
+  
+  .fa-twitter:before {
+    content: "\f099";
+  }
+  
+  .fa-instagram:before {
+    content: "\f16d";
+  }
+  
+  .fa-linkedin:before {
+    content: "\f0e1";
+  }
+  .copyrght {
+    background-color: darkgray;
+    color: black;
+    text-align: center;
+    padding: 40px;
+  }
