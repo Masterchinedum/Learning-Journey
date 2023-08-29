@@ -28,5 +28,38 @@ let shirt = 7.50;
 let totalpay = toaster + shirt * 2;
 console.log( `the total expected payment is: $${totalpay}`);
 
+//2d Let's say we want to always round a number down (2.8 => 2)
+let number = 2.8;
+let roundedNumber = Math.floor(number);
+console.log(`2.8 is rounded to: ${roundedNumber}`);
+
+//2e. Let's say we want to always round a number up (2.2 => 3)
+let number2 = 2.2;
+let roundedNumber2 = Math.ceil(number2);
+console.log(`2.2 is rounded to: ${roundedNumber2}`);
 
 
+//2f. The temperature is 25C. calculate the temperature in Fahrenheit
+let celsius = 25;
+let fahrenheit = celsius * 1.8 + 32;
+console.log(`the temperature in fahrenheit is: ${fahrenheit}F`);
+
+//2g. The temperature is 70F. calculate the temperature in Celsius
+let fahrenheit2 = 70;
+let celsius2 = (fahrenheit2 - 32) / 1.8;
+console.log(`the temperature in celsius is: ${Math.round(celsius2)}C`);
+
+//2h. The temperature is 25C. calculate the temperature in Kelvin
+let celsius3 = 25;
+let kelvin = celsius3 + 273.15;
+console.log(`the temperature in kelvin is: ${kelvin}K`);
+
+//2i. The temperature is 70F. calculate the temperature in Kelvin
+let fahrenheit3 = 70;
+let kelvin2 = (fahrenheit3 - 32) / 1.8 + 273.15;
+console.log(`the temperature in kelvin is: ${Math.round(kelvin2)}K`);
+
+//2g. The temperature is -5C. calculate the temperature in Fahrenheit
+let celsius4 = -5;
+let fahrenheit4 = celsius4 * 1.8 + 32;
+console.log(`the temperature in fahrenheit is: ${fahrenheit4}F`);
