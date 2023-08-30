@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+     <script>
+        true
+        false
+
+        console.log (5 === '5.00');
+
+        //write an if statement with a boolean values
+        if (true) {
+            console.log('hello')
+        } else {
+            console.log("it's false")
+        }
+
+        //write a code to check if someone is old enough to drive
+        let age = 5;
+        let legalAge = 18;
+        if (age >= legalAge & age <= 79) {
+            console.log( "You can drive")
+        } else if ((legalAge - age) <= 1 & (legalAge - age) > 0 ) {
+            console.log( `You are still too young to drive wait for a few months`)
+            
+        } else if (age > 79 ) {
+            console.log( `You are kinda too old to drive, why not just get a driver instead`)
+        }else {
+            console.log( `You are too young to drive wait for ${legalAge - age} years`)
+        };
+     </script>
+</body>
+</html>
