@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <h2> Practice Exercises</h2>
+    <script>
+        /*create a variable called 'hour and save the current hour of the day (use 24-hour format and save it as a number beetween o and 23).
+        if hour is between 6 and 12, display 'Good morning!' in the console
+        if hour is between 13 and 17 display 'good afternoon!' in the console
+        other wise display 'Goog=d night!' in the console */
+
+        let hour = "8"
+        let greet = ''
+        if (hour >=0 && hour < 12) {
+            console.log ( 'Good Morning! ');
+            greet ='Good Morning! '
+        } else if (hour >=12 && hour < 17) {
+            console.log ( 'Good Afternoon! ');
+            greet ='Good Afternoon! '
+        } else if (hour >=17 && hour <= 23) {
+            console.log ( 'Good night! ');
+            greet ='Good night! '
+        } else { console.log (`${hour} is not the proper input to represent the time of the day`)}
+
+        alert (greet);
+    </script>
+</body>
+</html>

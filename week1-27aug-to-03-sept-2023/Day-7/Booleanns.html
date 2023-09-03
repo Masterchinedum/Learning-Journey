@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean truthy and falsy values</title>
+</head>
+<body>
+    
+    <script>
+        /*if (5) {
+            console.log("this is a truthy value")
+        }
+        const cartQuantity = 0 ;
+
+        if (cartQuantity) {
+            console.log ('cart has products');
+        } else {
+            console.log('empty cart');
+        }*/
+
+        const result = true ? 'truthy' : 'falsy' ;
+        console.log(result);
+
+        false && console.log('hello');
+
+        const message = 5 && 'hello';
+        console.log (message)
+
+        const currency = 'EUR' || 'USD';
+        console.log (currency);
+
+        const currency2 = undefined || 'USD'
+        console.log (currency2);
+    </script>
+</body>
+</html>
