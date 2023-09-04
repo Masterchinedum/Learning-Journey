@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors v2</p>
+
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissors')">Scissors</button>
+    <button onclick="
+    score.wins=0; 
+    score.losses=0 ; 
+    score.ties= 0;
+    localStorage.removeItem('score')">Reset Score</button>
+
+    <script>
+        let score =JSON.parse(localStorage.getItem('score')) || {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+        /*
+        if (score === null) {
+            score = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+        }
+*/
+        
+        //random number generator function
+        function playGame(userMove) {
+            const moves = ['Rock', 'Paper', 'Scissors'];
+            const computerMove = moves[Math.floor(Math.random() * 3)];
+            
+            let result;
+            if (userMove === computerMove) {
+                result = 'It\'s a Tie';
+            } else if (
+                (userMove === 'Rock' && computerMove === 'Scissors') ||
+                (userMove === 'Paper' && computerMove === 'Rock') ||
+                (userMove === 'Scissors' && computerMove === 'Paper')
+            ) {
+                result = 'Great You Win';
+            } else {
+                result = 'You Lose';
+            }
+            //display results on the screen
+            if (result === 'Great You Win') {
+                score.wins ++;
+            } else if (result === 'You Lose') {
+                score.losses ++ ;
+            } else if (result === 'It\'s a Tie' ) {
+                score.ties ++;
+            }
+
+            localStorage.setItem('score', JSON.stringify(score));
+
+            alert(`You picked ${userMove}. Computer picked ${computerMove}. ${result}
+ Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);
+        }
+    </script>
+</body>
+</html>
