@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <button>Hello</button>
+    <!--add new button the select it-->
+
+
+    <button class="js-button">Hello2</button>
+
+    <script>
+        //gets the first button element
+        console.log (document.querySelector('button'));
+        //change the innerHtml property of the button 
+        document.querySelector('button')
+        .innerHTML = 'Hello World!';
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+/*
+        console.log (document.title);
+        document.title = 'Changed' ;
+
+        console.log (document.body);
+        console.log (typeof document.body);
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Hello click! </button>'
+
+
+        document.body.innerHTML = 'Hello';
+        document.title ='Good Job !'; 
+        */
+
+    </script>
+</body>
+</html>
