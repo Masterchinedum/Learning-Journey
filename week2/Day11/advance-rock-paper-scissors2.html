@@ -20,10 +20,26 @@
             background-color: transparent;
             margin: auto 25px;
             border-radius: 50%;
+            cursor: pointer;
         }
-        .movebtn img {
+        .moveicon {
             height: 50px;
             padding: 20px;
+        }
+
+        .result-text{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .score-text {
+            margin-top: 50px;
+        }
+        .resetbtn{
+            background-color: white;
+            border: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5%;
         }
 
 
@@ -32,14 +48,14 @@
 <body>
     <p class="title">Rock Paper Scissors v2</p>
 
-    <button class="movebtn" onclick="playRound('Rock')"><img src="images/rock.png" alt="Rock"></button>
-    <button class="movebtn" onclick="playRound('Paper')"><img
-        src="images/paper.png" alt="paper"></button>
-    <button class="movebtn" onclick="playRound('Scissors')"><img src="images/scissors.png" alt="scissors"></button>
+    <button class="movebtn " onclick="playRound('rock')"><img src="images/rock.png" alt="Rock" class="moveicon"></button>
+    <button class="movebtn" onclick="playRound('paper')"><img
+        src="images/paper.png" alt="paper" class="moveicon"></button>
+    <button class="movebtn" onclick="playRound('scissors')"><img src="images/scissors.png" alt="scissors" class="moveicon"></button>
     <p class="result-text"></p>
     <p class="moves-text"></p>
     <p class="score-text"></p>
-    <button class="btn" onclick="resetGame()">Reset Score</button>
+    <button class="resetbtn" onclick="resetGame()">Reset Score</button>
 
     <script>
         let score = JSON.parse(localStorage.getItem('rpsScore')) || { wins: 0, losses: 0, ties: 0 };
@@ -47,7 +63,7 @@
         updateScoreDisplay();
 
         function playRound(userChoice) {
-            const moves = ['Rock', 'Paper', 'Scissors'];
+            const moves = ['rock', 'paper', 'scissors'];
             const computerChoice = moves[Math.floor(Math.random() * 3)];
             const result = getRoundResult(userChoice, computerChoice);
             displayUserAndComputerMoves(userChoice, computerChoice);
@@ -55,10 +71,16 @@
         }
 
         function getRoundResult(userChoice, computerChoice) {
+            // Modify this function to use lowercase strings for comparison
+            userChoice = userChoice.toLowerCase();
+            computerChoice = computerChoice.toLowerCase();
+
             if (userChoice === computerChoice) return 'It\'s a Tie';
-            if ((userChoice === 'Rock' && computerChoice === 'Scissors') ||
-                (userChoice === 'Paper' && computerChoice === 'Rock') ||
-                (userChoice === 'Scissors' && computerChoice === 'Paper')) {
+            if (
+                (userChoice === 'rock' && computerChoice === 'scissors') ||
+                (userChoice === 'paper' && computerChoice === 'rock') ||
+                (userChoice === 'scissors' && computerChoice === 'paper')
+            ) {
                 return 'You Win';
             }
             return 'You Lose';
@@ -80,7 +102,8 @@
         }
 
         function displayUserAndComputerMoves(userChoice, computerChoice) {
-            document.querySelector('.moves-text').innerHTML = `You Picked ${userChoice} - Computer Picked ${computerChoice}`;
+            document.querySelector('.moves-text').innerHTML = `You <img src = "images/${userChoice}.png" alt = "${userChoice}" class="moveicon"> <img src = "images/${computerChoice}.png" alt = "${computerChoice}" class="moveicon">  Computer 
+            <br><span style="margin-top: 10px; display: block;"> you picked <b>${userChoice}</b> an computer picked <b>${computerChoice}</b> <span>`;
         }
 
         function updateScoreDisplay() {
