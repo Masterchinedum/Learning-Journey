@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Project</title>
+
+    <style>
+        /* Styles for the subscribe button */
+        button {
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif, Arial;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .css-subscribe {
+            display: block;
+            background-color: black;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            padding: 10px 15px;
+        }
+
+        /* Styles for the subscribed state */
+        .subscribed {
+            background-color: rgb(240, 240, 240);
+            color: black;
+
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif, Arial;
+            font-size: 16px;
+            padding: 10px
+        }
+        .cost-input{
+            font-size: 16px;
+            padding: 10px;
+        }
+        .Calculate-button {
+            background-color: green;
+            padding: 12px 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="toggleSubscription();" class="subscribe-button css-subscribe">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="cost-input" type="number" onkeydown="handleCostKeydown(event)">
+    <button onclick="calculateTotal();" class="Calculate-button">Calculate</button>
+    <p class="total-cost"></p>
+
+    <script>
+        function handleCostKeydown(event) {
+            if (event.key === 'Enter') {
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal() { 
+            const inputElement = document.querySelector('.cost-input');
+            let cost = Number(inputElement.value);
+
+            cost = cost < 40 ? cost + 10 : cost;
+
+            document.querySelector('.total-cost').innerHTML = `$${cost}`;
+        }
+
+        function toggleSubscription() {
+            const buttonElement = document.querySelector('.subscribe-button');
+            buttonElement.innerText = buttonElement.innerText === 'Subscribe' ? 'Subscribed' : 'Subscribe';
+            
+            // Toggle the 'subscribed' class to change the background color
+            buttonElement.classList.toggle('subscribed');
+        }
+    </script>
+</body>
+</html>
