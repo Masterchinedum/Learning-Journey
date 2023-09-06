@@ -1,0 +1,42 @@
+/* style.css */
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.movebtn {
+    border-color: white;
+    background-color: transparent;
+    margin: auto 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.moveicon {
+    height: 50px;
+    padding: 20px;
+}
+
+.result-text{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.score-text {
+    margin-top: 50px;
+}
+
+.resetbtn{
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5%;
+}
