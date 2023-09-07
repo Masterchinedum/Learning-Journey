@@ -1,59 +1,82 @@
 /* style.css */
 
 body {
-    background-color: rgb(25, 25, 25);
-    color: white;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text */
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Center align text */
+    padding: 20px;
 }
 
 .title {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
+    color: #007bff; /* Blue title color */
+    margin-top: 10px; /* Add some space at the top */
 }
 
 .movebtn {
-    border-color: white;
-    background-color: transparent;
-    margin: auto 25px;
+    border: 2px solid #007bff; /* Blue border */
+    background-color: #fff; /* White background */
+    margin: 10px; /* Improved spacing */
     border-radius: 50%;
     cursor: pointer;
+    padding: 10px; /* Increased padding */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.movebtn:hover {
+    background-color: #007bff; /* Blue background on hover */
+    transform: scale(1.1); /* Slight scale increase on hover */
 }
 
 .moveicon {
     height: 50px;
-    padding: 20px;
 }
 
-.result-text{
-    font-size: 25px;
+.result-text {
+    font-size: 24px;
     font-weight: bold;
+    margin-top: 20px;
+    color: #007bff; /* Blue result text color */
 }
 
 .score-text {
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 18px;
 }
 
-.autoplaybtn {
-    background-color: white;
-    color: black;
+.autoplaybtn, .resetbtn {
+    background-color: #007bff;
+    color: #fff;
     border: none;
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 5%;
     cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-/* Add styles for the Auto Play button when active */
 .autoplaybtn.active {
-    background-color: red;
-    color: white;
+    background-color: #dc3545; /* Red background for active Auto Play */
 }
 
-.resetbtn {
-    background-color: white;
-    border: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5%;
-    cursor: pointer;
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+    .movebtn {
+        padding: 8px;
+    }
+    .moveicon {
+        height: 40px;
+    }
+    .result-text {
+        font-size: 20px;
+    }
+    .score-text {
+        font-size: 16px;
+    }
 }
