@@ -10,7 +10,7 @@ const Header = () => {
       <a href = "" className = "nav-link">About</a>
       <a href = "" className = "nav-link">Contact</a>
       <Link to = "/login">Login</Link>
-      <Link to = "">Register</Link>
+      <Link to = "/register">Register</Link>
     </nav>
   </header>
   )
